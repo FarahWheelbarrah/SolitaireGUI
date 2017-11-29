@@ -1,0 +1,43 @@
+.root {
+    -fx-background-color: #c2d3d1;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    
+}
+
+.list-cell {
+  -fx-background-color: -fx-background;
+  -fx-background-insets: 0;
+  -fx-text-fill: black;
+}
+
+.list-cell:selected {
+    -fx-background-color: #8ad2e4;
+}
+
+.list-view {
+    -fx-border-insets: -1.5;
+    -fx-border-width: 1.5;
+    -fx-background-insets: 1;
+}
+
+.button {
+    -fx-background-insets: 0;
+    -fx-border-color: #b6bac1;
+}
+
+/*probably don't need this styleClass'*/
+/*.reserveDeckLv {
+    -fx-orientation: horizontal;
+}*/
+
+/*style that you need to apply to the ListViews when you hover over the listView and it's not empty (ONLY IF IT'S NOT EMPTY)*/
+/*.list-view:filled {*/
+    /*-fx-background-color: #006699;*/
+    /*-fx-background-insets: -1;*/
+/*}*/
+/*maybe give the ListViews a "standard" border, i.e. a border that they have when they user is not interacting with them*/
+
+/*could also apply a border but make the -fx-border-insets: -1;*/
+/*MAYBE make it so that ListView cells are also elements that highlight when you hover over them (remember that listView
+cells from the top down need to be highlighted for the playPile ListViews because you can move multiple cards from playPile ListViews)*/

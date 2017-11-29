@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox prefHeight="560" prefWidth="770" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.TableController" fx:id="rootVBox">
+    <padding><Insets top="10" bottom="10" left="10" right="10"/></padding>
+    
+    <GridPane alignment="CENTER_LEFT" hgap="20" prefHeight="200">
+        <padding><Insets top="-130"/></padding>
+        <Label text="Deck" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label text="Reserve Deck" GridPane.columnIndex="1" GridPane.rowIndex="0"/> 
+        <Button text="Deck" fx:id="deckBtn" onAction="#fillDecks" prefWidth="80" prefHeight="50" GridPane.halignment="CENTER" GridPane.valignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1"/> 
+        <ListView fx:id="reserveDeckLv" orientation="HORIZONTAL" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" prefHeight="50" GridPane.halignment="CENTER" GridPane.valignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+    </GridPane>
+    
+    <GridPane alignment="CENTER_LEFT" hgap="5" prefHeight="173">
+        <padding><Insets top="-120" bottom="10"/></padding>
+        <Label text="Play Pile 1" GridPane.columnIndex="0" GridPane.rowIndex="1"/> 
+        <ListView fx:id="playPile1Lv" GridPane.columnIndex="0" GridPane.rowIndex="2" prefWidth="255" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Play Pile 2" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <ListView fx:id="playPile2Lv" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="255" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Play Pile 3" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <ListView fx:id="playPile3Lv" GridPane.columnIndex="2" GridPane.rowIndex="2" prefWidth="255" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Play Pile 4" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <ListView fx:id="playPile4Lv" GridPane.columnIndex="3" GridPane.rowIndex="2" prefWidth="255" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Play Pile 5" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+        <ListView fx:id="playPile5Lv" GridPane.columnIndex="4" GridPane.rowIndex="2" prefWidth="255" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Play Pile 6" GridPane.columnIndex="5" GridPane.rowIndex="1"/>
+        <ListView fx:id="playPile6Lv" GridPane.columnIndex="5" GridPane.rowIndex="2" prefWidth="255" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Play Pile 7" GridPane.columnIndex="6" GridPane.rowIndex="1"/>
+        <ListView fx:id="playPile7Lv" GridPane.columnIndex="6" GridPane.rowIndex="2" prefWidth="255" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+    </GridPane>
+    
+    <GridPane alignment="CENTER_LEFT" hgap="5" vgap="1">
+        <Label text="Goal Pile 1" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <ListView fx:id="goalPile1Lv" prefHeight="52" prefWidth="100" GridPane.columnIndex="0" GridPane.rowIndex="1" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Goal Pile 2" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <ListView fx:id="goalPile2Lv" prefHeight="52" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Goal Pile 3" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <ListView fx:id="goalPile3Lv" prefHeight="52" prefWidth="100" GridPane.columnIndex="2" GridPane.rowIndex="1" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+        <Label text="Goal Pile 4" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        <ListView fx:id="goalPile4Lv" prefHeight="52" prefWidth="100" GridPane.columnIndex="3" GridPane.rowIndex="1" onMouseEntered="#applyHoverBorder" onMouseExited="#removeHoverBorder" onDragExited="#removeDragBorder">
+            <placeholder>
+                <Label text="Empty"/>
+            </placeholder>
+        </ListView>
+    </GridPane>
+    <Button text="test" onAction="#testRemove" fx:id="testBtn"/>
+    <stylesheets>
+        <URL value="@table.css"/>
+    </stylesheets>
+</VBox>
